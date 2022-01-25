@@ -71,3 +71,74 @@
     font-size: 32px;
 }
 
+.dados{
+    width: 80%;
+    margin: 30px auto;
+}
+
+.sobrenos{
+    display: flex;
+    justify-content: space-between;  
+}
+
+.cartao{
+    width: 40%;
+    border-radius: 50px;
+}
+
+h2{
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+p{
+    line-height: 30px;
+}
+
+.validacao{
+    background-color: #657A8C;
+    padding: 5em 0;
+    text-align: center;
+}
+
+.validacao h2{
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+input{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+}
+/*comando que tira as setinhas do input type number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.numcartao{
+    margin-bottom: 25px;
+    width: 40%;
+    padding: 20px;
+    font-size: 20px;
+
+}
+
+.validar{
+    background-color: #9BAEBF;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
+    font-weight: bold;
+    color: #364559;
+    margin: 20px auto;
+}

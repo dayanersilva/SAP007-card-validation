@@ -27,48 +27,54 @@
       </div>
 
       <section class="dados">
-        <article class="sobre">
-          <h2>Sobre a Empresa</h2>
-          <p> A Valid Cred é uma empresa de validações de cartão de crédito,
-            onde nosso objetivo é trazer rapidez no processo da solicitação de
-            um novo cartao de crédito.
-            O uso primário de validação do cartão de crédito permiti
-            que as empresas identifiquem números de cartões de crédito válidos
-            antes de solicitar uma autorização da central do cartão. Trazendo
-            assim um método agil tanto para a empresa e para o cliente.
-        </article>
+        <div class="sobrenos">
+          <article class="sobre">
+            <h2>Sobre a Empresa</h2>
+            <p> A Valid Cred é uma empresa de validações de cartão de crédito,
+              onde nosso objetivo é trazer rapidez no processo da solicitação de
+              um novo cartao de crédito.
+              O uso primário de validação do cartão de crédito permiti
+              que as empresas identifiquem números de cartões de crédito válidos
+              antes de solicitar uma autorização da central do cartão. Trazendo
+              assim um método agil tanto para a empresa e para o cliente.
+          </article>
 
-        <article class="funcao">
-          <h2>Conheça sobre Validação</h2>
-          <p>A validação do cartão de crédito é o primeiro passo para aceitar
-            um pagamento com cartão. Após uma validação bem sucedida,
-            a empresa irá introduzir o número do cartão em um programa de software
-            comercial ou uma máquina de cartão de crédito, que envia o número da conta
-            para o emissor do cartão para autorização.</p>
-        </article>
+          <img class="cartao" src="../src/img/cartao_sobre.png" alt="Desenho cartao de credito">
+        </div>
+
+        <div class="funcao">
+          <article class="funcao">
+            <h2>Conheça sobre Validação</h2>
+            <p>A validação do cartão de crédito é o primeiro passo para aceitar
+              um pagamento com cartão. Após uma validação bem sucedida,
+              a empresa irá introduzir o número do cartão em um programa de software
+              comercial ou uma máquina de cartão de crédito, que envia o número da conta
+              para o emissor do cartão para autorização. <br><br>
+              O <b> algoritmo de Luhn</b>, também chamado de módulo 10, é um método de soma
+              de verificação, usado para validar números de identificação, como o IMEI
+              de telefones celulares, cartões de crédito etc.
+              Esse algoritmo é simples. Obtemos o inverso do número a ser
+              verificado (que contém apenas dígitos [0-9]); todos os números
+              que ocupam uma posição par devem ser multiplicados por dois; se
+              esse número for maior ou igual a 10, devemos adicionar os dígitos
+              do resultado; o número a verificar será válido se a soma de seus
+              dígitos finais for um múltiplo de 10.
+            </p>
+          </article>
+        </div>
       </section>
-
-
-
-
-
-      <h1>Valide seu cartao de crédito</h1>
-
-      <label for="cartao">Número do Cartão</label> <br>
-      <input id="cartao" type="number" placeholder=""> <br><br>
-      <input id="validar" type="button" value="Validar">
-
+      <section class="validacao">
+        <h2>Valide seu cartão de crédito</h2>
+        <form >
+          <input id="numcartao" class="numcartao" type="number" placeholder="Insira o número do cartão"> 
+          <input id="validar" class="validar" type="submit" value="Validar">
+        </form>
+      </section>
     </main>
-
-
-
-
-
-
-
-
-
   </div>
+  <footer>
+    <p> Dayane &copy; Todos os direitos reservados</p>
+  </footer>
   <script src="index.js" type="module"></script>
 </body>
 
