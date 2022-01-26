@@ -54,7 +54,7 @@ h2, p{
 }
 
 .main-banner{
-    background-image: url(../src/img/banner_card.jpg);
+    background-image: url(banner_card.jpg);
     background-position: center;
     background-size: cover;
     padding: 10em 0;
