@@ -1,19 +1,15 @@
 
 
 const validator = {
+
+  isvalid(creditCardNumber) {
+    const ccnumber = creditCardNumber.length
+
+
+    for (let i = ccnumber - 1; i >= 0; i--);
   
-  isValid : function (creditCardNumber){
-    
-    for (let i = creditCardNumber.length-1; i >= 0; i--) {
-     let reverseNumber = parseInt(creditCardNumber.charAt(i));
-    console.log(reverseNumber);
-      
-    }
-   }
-
-   
-};
-
+  }
+}
 
 export default validator;
 

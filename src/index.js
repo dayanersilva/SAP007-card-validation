@@ -7,7 +7,7 @@ const val = document.getElementById('validarCartao');
 val.addEventListener('click', clicar)
 
 function clicar() {
-    const numCard = document.getElementById('numcartao');
-    const creditCardNumber = parseInt(numCard.value);
-    validator.isValid(creditCardNumber);
+    let numCard = document.getElementById('numcartao');
+    let creditCardNumber = numCard.value;
+    validator.isvalid(creditCardNumber);
 }
