@@ -1,13 +1,22 @@
 
 import validator from './validator.js';
 
-console.log(validator);
+//console.log(validator.isValid(numeroCartao))
 
-const val = document.getElementById('validarCartao');
-val.addEventListener('click', clicar)
+
+const validar = document.getElementById('validarCartao')
+validar.addEventListener('click', clicar)
 
 function clicar() {
-    let numCard = document.getElementById('numcartao');
-    let creditCardNumber = numCard.value;
-    validator.isvalid(creditCardNumber);
+    let numeroCartao = document.getElementById('numcartao').value
+    let numeroevalido = validator.isValid(numeroCartao)
+    
+    if(numeroevalido){
+        alert ('É válido')
+    }else{
+        alert ('Não é válido') 
+    }
+
+    validator.maskify(numeroCartao)
+
 }
