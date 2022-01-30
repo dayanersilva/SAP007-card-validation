@@ -4,37 +4,40 @@ const validator = {
 
   isValid(numeroCartao) {
 
-    //condição se caso o input estiver vazio, null ou tiver menos que 16 numeros irá dar um alerta
-    if (numeroCartao == "" || numeroCartao == null || numeroCartao.length < 16) {
-      alert (" Digite apenas os números do cartão")
+    let arrayNumero = [] // variavel de array vazia 
+
+    for (let i = 0; i < numeroCartao.length; i++) { // loop pela variavel que tem o valor do numero do cartao
+      const numero = Number(numeroCartao[i]) //aqui criei uma varivavel que recebe o numero que estao sendo percorridos loop e trasfomando em numero
+      arrayNumero.push(numero) // aqui eu puxo os numeros da const numero e coloco na variavel de array vazia que criei antes
     }
-    
+
+    let arrayreverso = arrayNumero.reverse() // aqui reverto o array feito no for 
     let soma = 0
 
-    for (let i = numeroCartao.length - 1; i >= 0; i--) { //loop invertido
+    for (let i = 0; i < arrayreverso.length; i++) { // novo loop que percorre o array invertido
+      if (i % 2 != 0) { // se o numero for impar 
+         arrayreverso[i] *= 2 // multiplica por 2
 
-      if (i % 2 != 0) {
-        numeroCartao[i] = Number(numeroCartao[i]) * 2
-        if (numeroCartao[i] > 9) {
-          numeroCartao[i] = numeroCartao[i] - 9
-          soma = soma + Number(numeroCartao[i])
+        if (arrayreverso[i] > 9) { // aqui compara se o numero multiplicado foi maior que 9
+          arrayreverso[i] -= 9 // se for maior que 9 ele subtrai 9
+          soma += arrayreverso[i] // aqui soma
         } else {
-          soma = soma + numeroCartao[i]
+          soma += arrayreverso[i] // se o numero nao for par ele vai somando na variavel soma junto com os impares que fizeram todo o processo do if
         }
-      } else{
-        soma = soma + Number(numeroCartao[i])
+      } else {
+        soma += arrayreverso[i]
       }
+
     }
-    
-    if (soma % 10 === 0) {
-      return numeroCartao = true
+
+    if (soma % 10 === 0) { // aqui ele vez se o numero e divisivel por 10
+      return arrayreverso = true
     } else {
-      return numeroCartao = false
+      return arrayreverso = false
     }
   }
-
-
-  , maskify(numeroCartao) {
+  
+ ,maskify(numeroCartao) {
     let digit_mask = Array.from(numeroCartao)
     for (let index = 0; index < digit_mask.length - 4; index++) {
       digit_mask[index] = "#"
