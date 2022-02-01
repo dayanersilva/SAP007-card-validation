@@ -9,10 +9,16 @@ validar.addEventListener('click', clicar)
 
 function clicar() {
     let numeroCartao = document.getElementById('numcartao').value
+
+    if(numeroCartao === '') {
+        alert ('Nenhum número foi digitado')
+        return
+    }
+
     let numeroevalido = validator.isValid(numeroCartao)
     
-    if(numeroevalido){
-        alert ('É válido')
+    if(numeroevalido === true){
+       alert ('É válido')
     }else{
         alert ('Não é válido') 
     }
