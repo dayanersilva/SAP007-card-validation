@@ -13,8 +13,8 @@
       <nav>
         <a href="#"><img class="logo" src="logo_1.png" alt="logo"></a>
         <ul class="nav-items">
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Função</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#funcao">Função</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </nav>
@@ -28,7 +28,7 @@
 
       <section class="dados">
         <div class="sobrenos">
-          <article class="sobre">
+          <article class="sobre" id="sobre">
             <h2>Sobre a Empresa</h2>
             <p> A Valid Cred é uma empresa de validações de cartão de crédito,
               onde nosso objetivo é trazer rapidez no processo da solicitação de
@@ -43,7 +43,7 @@
         </div>
 
         <div class="funcao">
-          <article class="funcao">
+          <article class="funcao" id="funcao">
             <h2>Conheça sobre Validação</h2>
             <p>A validação do cartão de crédito é o primeiro passo para aceitar
               um pagamento com cartão. Após uma validação bem sucedida,
@@ -63,16 +63,17 @@
           </article>
         </div>
       </section>
+
       <section class="validacao">
         <h2>Valide seu cartão de crédito</h2>
 
-        <form action="#" id="formulario">
-          
-          <input id="numcartao" class="numcartao" type="number" placeholder="Insira o número do cartão" required> 
-          <input id="validarCartao" class="validar" type="submit" value="Validar Cartão">
+        <form >
+          <input id="numcartao" class="numcartao" type="text" placeholder="Insira o número do cartão" required> 
+          <input id="validarCartao" class="validar" type="button" value="Validar Cartão">
         </form>
-
       </section>
+
+      <p id="msg" class="msg"></p>
     </main>
   </div>
   <footer>
