@@ -36,7 +36,7 @@
               O uso primário de validação do cartão de crédito permiti
               que as empresas identifiquem números de cartões de crédito válidos
               antes de solicitar uma autorização da central do cartão. Trazendo
-              assim um método agil tanto para a empresa e para o cliente. </p>  
+              assim um método agil tanto para a empresa e para o cliente. </p>
           </article>
 
           <img class="cartao" src="cartao_sobre.png" alt="Desenho cartao de credito">
@@ -64,23 +64,26 @@
         </div>
       </section>
 
-      <section class="validacao">
-        <h2>Valide seu cartão de crédito</h2>
+      <h2 class="teste">Vamos Testar ?</h2>
 
-        <form >
-          <input id="numcartao" class="numcartao" type="text" placeholder="Insira o número do cartão" required> 
-          <input id="validarCartao" class="validar" type="button" value="Validar Cartão">
-        </form>
+      <section class="validacao">
+        <div class="entrada">
+            <input id="numcartao" class="numcartao" type="number" placeholder="Insira o número do cartão" required>
+            <input id="validar" class="validar" type="button" value="Validar Cartão">
+        </div>
+
+        <div class="res">
+          <p id="msg" class="msg"></p>
+        </div>
       </section>
 
-      <p id="msg" class="msg"></p>
     </main>
   </div>
   <footer>
     <p> Dayane&copy; Todos os direitos reservados</p>
   </footer>
 
-  
+
   <script src="index.js" type="module"></script>
 </body>
 

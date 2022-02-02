@@ -4,18 +4,10 @@ const validator = {
 
   isValid(numeroCartao) {
 
-    //let arrayNumero = [] // variavel de array vazia 
-
-    //for (let i = 0; i < numeroCartao.length; i++) { // loop pela variavel que tem o valor do numero do cartao
-     // const numero = Number(numeroCartao[i]) //aqui criei uma varivavel que recebe o numero que estao sendo percorridos loop e trasfomando em numero
-     // arrayNumero.push(numero) // aqui eu puxo os numeros da const numero e coloco na variavel de array vazia que criei antes
-    //}
-
-    //let arrayreverso = arrayNumero.reverse() // aqui reverto o array feito no for 
-    let arrayreverso = []
-    for(let i = numeroCartao.length - 1; i >= 0; i--){
-        const numero = Number(numeroCartao[i])
-        arrayreverso.push(numero)
+    let arrayreverso = [] // objeto vazio 
+    for(let i = numeroCartao.length - 1; i >= 0; i--){ // loop ao contrário que pega da direita p esquerda
+        const numero = Number(numeroCartao[i]) // variavel que recebe o valor do for e trasnforma em numero
+        arrayreverso.push(numero) // aqui eu o valor em numero e puxo p o array reverso
     }
 
     let soma = 0
@@ -44,11 +36,11 @@ const validator = {
   }
   
  ,maskify(numeroCartao) {
-    let digit_mask = Array.from(numeroCartao)
-    for (let index = 0; index < digit_mask.length - 4; index++) {
-      digit_mask[index] = "#"
+    let digit_mask = Array.from(numeroCartao) // trasforma o valor do input em array 
+    for (let index = 0; index < digit_mask.length - 4; index++) { 
+      digit_mask[index] = "#" // loop onde os ultimos 4 caracteres nao seram mudados para #
     }
-    let join = digit_mask.join("")
+    let join = digit_mask.join("") // join junta tudo em uma unica string
 
     return join
   }
