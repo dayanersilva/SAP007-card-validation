@@ -11,6 +11,7 @@ function validarCartao() {
 
     if(numeroCartao == ""){
         alert ('Digite o número')
+        return
     }
     
     if(numeroevalido){
